@@ -12,7 +12,7 @@ const reset = document.getElementById("resetButton");
 
 function itIsBlack() {
   let black = document.getElementById("correctOne")
-  if (userGuess == black) {
+  if (userGuess === black) {
     output.innerHTML = "You guessed right";
     output.style.color = "green";
   }
@@ -23,25 +23,25 @@ function itIsBlack() {
 }
 
 function itIsElephant() {
-  let Elephant = document.getElementById("correctTwo")
-  if (userGuessTwo === Elephant) {
+  let elephant = document.getElementById("correctTwo")
+  if (userGuessTwo === elephant) {
      outputTwo.innerHTML = "You guessed right";
     outputTwo.style.color = "green";
   }
-  if (userGuessTwo != Elephant) {
-    outputTwo.innerHTML = "You guessed wrong, it was " + Elephant;
+  if (userGuessTwo != elephant) {
+    outputTwo.innerHTML = "You guessed wrong, it was " + elephant;
     outputTwo.style.color = "red";
   }
 }
 
 function itIsSoccer() {
-  let Soccer = document.getElementById("correctThree")
-  if (userGuessThree === Soccer) {
+  let soccer = document.getElementById("correctThree")
+  if (userGuessThree === soccer) {
     outputThree.innerHTML = "You guessed right";
     outputThree.style.color = "green";
   }
-  if (userGuessThree != Soccer) {
-    outputThree.innerHTML = "You guessed wrong, it was " + Soccer;
+  if (userGuessThree != soccer) {
+    outputThree.innerHTML = "You guessed wrong, it was " + soccer;
     outputThree.style.color = "red";
   }
 }
