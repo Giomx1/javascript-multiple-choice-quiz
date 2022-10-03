@@ -9,16 +9,17 @@ let userGuessTwo = (inputTwo);
 let inputThree = document.getElementById("sportsInput");
 let userGuessThree = (inputThree);
 const reset = document.getElementById("resetButton");
+let black = document.getElementById("correctOne");
+
 
 function itIsBlack() {
-  let black = document.getElementById("correctOne")
   if (userGuess === black) {
     output.innerHTML = "You guessed right";
     output.style.color = "green";
   }
   if (userGuess != black) {
-    output.innerHTML = "You guessed wrong, it was " + black; 
-    output.style.color = "red";
+   output.innerHTML = "You guessed wrong, it was " + black ; 
+   output.style.color = "red";
   } 
 }
 
