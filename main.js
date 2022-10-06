@@ -1,62 +1,34 @@
-let output = document.getElementById("outputText");
-let outputTwo = document.getElementById("outputTextTwo");
-let outputThree = document.getElementById("outputTextThree");
-let enter = document.getElementById("enterButton");
-let input = document.getElementById("colorInput");
-let userGuess = (input);
-let inputTwo = document.getElementById("animalInput");
-let userGuessTwo = (inputTwo);
-let inputThree = document.getElementById("sportsInput");
-let userGuessThree = (inputThree);
-const reset = document.getElementById("resetButton");
-let black = document.getElementById("correctOne");
-
-
-function itIsBlack() {
-  if (userGuess === black) {
-    output.innerHTML = "You guessed right";
-    output.style.color = "green";
-  }
-  if (userGuess != black) {
-   output.innerHTML = "You guessed wrong, it was " + black ; 
-   output.style.color = "red";
-  } 
-}
-
-function itIsElephant() {
-  let elephant = document.getElementById("correctTwo")
-  if (userGuessTwo === elephant) {
-     outputTwo.innerHTML = "You guessed right";
-    outputTwo.style.color = "green";
-  }
-  if (userGuessTwo != elephant) {
-    outputTwo.innerHTML = "You guessed wrong, it was " + elephant;
-    outputTwo.style.color = "red";
+let reset = document.getElementById("resetButton")
+function favoriteColor() {
+  if (document.getElementById("negro").checked) {
+    document.getElementById("disp").innerHTML =
+      "Correct it was " + document.getElementById("negro").value;
+    document.getElementById("disp").style.color = "green";
+  } else {
+    document.getElementById("disp").style.color = "red";
+    document.getElementById("disp").innerHTML =
+      "Wrong it was " + document.getElementById("negro").value;
   }
 }
-
-function itIsSoccer() {
-  let soccer = document.getElementById("correctThree")
-  if (userGuessThree === soccer) {
-    outputThree.innerHTML = "You guessed right";
-    outputThree.style.color = "green";
+function landAnimal() {
+ if (document.getElementById("elefante").checked) {
+    document.getElementById("dispTwo").innerHTML =
+      "Correct it was " + document.getElementById("elefante").value;
+    document.getElementById("dispTwo").style.color = "green";
+  } else {
+    document.getElementById("dispTwo").style.color = "red";
+    document.getElementById("dispTwo").innerHTML =
+      "Wrong it was " + document.getElementById("elefante").value;
   }
-  if (userGuessThree != soccer) {
-    outputThree.innerHTML = "You guessed wrong, it was " + soccer;
-    outputThree.style.color = "red";
+}
+function popularSport() {
+  if (document.getElementById("futbol").checked) {
+    document.getElementById("dispThree").innerHTML =
+      "Correct it was " + document.getElementById("futbol").value;
+    document.getElementById("dispThree").style.color = "green";
+  } else {
+    document.getElementById("dispThree").style.color = "red";
+    document.getElementById("dispThree").innerHTML =
+      "Wrong it was " + document.getElementById("futbol").value;
   }
 }
-
-function runItAll() {
-  itIsBlack()
-  itIsElephant()
-  itIsSoccer()
-}
-enter.addEventListener("click", runItAll)
-
-function resetQuiz() {
-  output.innerHTML = "";
-  outputTwo.innerHTML = "";
-  outputThree.innerHTML = "";
-}
-reset.addEventListener("click", resetQuiz)

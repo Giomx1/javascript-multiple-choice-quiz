@@ -1,48 +1,50 @@
-<!DOCTYPE html>
-<html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>JS Bin</title>
+  <title>
+    My quiz
+  </title>
 </head>
+
 <body>
-  
-<form onsubmit="return false;">
-    
-  <p>What is my favorite color?</p>
-  
- <div id="colorInput">
-  <input name="question1"  value="Black" type="radio" id="correctOne">Black<br> 
-  <input name="question1" type="radio" >Blue<br>
-  <input name="question1" type="radio" >Red<br>
-  <input name="question1" type="radio" >Purple<br>
-  <h2>Result: <div id="outputText"></div></h2>
- </div> 
 
-  <p>What is the biggest land animal?</p>
- <div id="animalInput">
-  <input id="correctTwo" name="question2" type="radio">Elephant<br>
-  <input name="question2" type="radio">Hippo<br>
-  <input id="animalInput" name="question2" type="radio">Duck<br>
-   <input id="animalInput" name="question2" type="radio">Horse<br>
-  <h2>Result: <div id="outputTextTwo"></div></h2>
-  </div>    
+  <h1 style="color:red;">My quiz</h1>
 
- 
-  <p>What is the most popular sport?</p>
- <div id="sportsInput">
-  <input id="correctThree" name="question3" type="radio">Soccer<br>
-  <input name="question3" type="radio">Boxing<br>
-  <input name="question3" type="radio">Golf<br>
-  <input name="question3" type="radio">Football<br>
-  <h2>Result: <div id="outputTextThree"></div></h2>
-  <br>
- </div> 
-  
-  <button id="enterButton">Enter</button>
-  <button id="resetButton">Reset</button>
-  
-</form> 
-<script src="main.js"></script>
+  <form>
+    <p>What is my favorite color?</p>
+    <input type="radio" name="color" id="negro" value="Black">Black<br>
+
+    <input type="radio" name="color" id="verde" value="Green">Green<br>
+
+    <input type="radio" name="color" id="morado" value="Purple">Purple<br>
+
+    <input type="radio" name="color" id="rojo" value="Red">Red<br><br>
+    <div id="disp"></div>
+
+    <p>What is the biggest land animal?</p>
+    <input type="radio" name="animal" id="pero" value="Dog">Dog<br>
+
+    <input type="radio" name="animal" id="elefante" value="Elephant">Elephant<br>
+
+    <input type="radio" name="animal" id="gato" value="Cat">Cat<br>
+
+    <input type="radio" name="animal" id="hipopo" value="Hippo">Hippo<br><br>
+     <div id="dispTwo"></div>
+
+    <p>What is the most popular sport?</p>
+    <input type="radio" name="sport" id="futbol" value="Soccer">Soccer<br>
+
+    <input type="radio" name="sport" id="boxeo" value="Boxing">Boxing<br>
+
+    <input type="radio" name="sport" id="baloncesto" value="Basketball">Basketball<br>
+
+    <input type="radio" name="sport" id="golf" value="Golf">Golf<br><br>
+     <div id="dispThree"></div>
+
+    <button type="button" onclick="allQuestions()">
+      Submit
+    </button>
+    <button type="button" id="resetButton">Reset</button>
+  </form>
+  <script src="main.js"></script>
 </body>
-</html
+
+</html>
