@@ -32,3 +32,16 @@ function popularSport() {
       "Wrong it was " + document.getElementById("futbol").value;
   }
 }
+
+function allFunctions(){
+  favoriteColor()
+  landAnimal()
+  popularSport()
+}
+reset.addEventListener("click", resetGame)
+
+function resetGame(){
+   document.getElementById("disp").innerHTML = "";
+   document.getElementById("dispTwo").innerHTML = "";
+   document.getElementById("dispThree").innerHTML = "";
+}
