@@ -40,8 +40,16 @@ function allFunctions(){
 }
 reset.addEventListener("click", resetGame)
 
+function resetButtons(){
+  let unCheckButtons = document.getElementsByClassName('unCheck');
+for (let i = 0; i < unCheckButtons.length; i++) {
+    unCheckButtons[i].checked = false;
+  }
+}
+
 function resetGame(){
    document.getElementById("disp").innerHTML = "";
    document.getElementById("dispTwo").innerHTML = "";
    document.getElementById("dispThree").innerHTML = "";
+   resetButtons()
 }
